@@ -12,8 +12,15 @@ $balanced:                        #33cd5f !default;
 $energized:                       #ffc900 !default;
 $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
-$dark:                            #444 !default;
 */
+$cherry-gray:                     rgba(45, 45, 45, 1);
+$dark:                            $cherry-gray;
+$dark-cherry:                     rgba(30, 30, 30, 1);
+$gray-red:                        rgba(55, 55, 55, 1);
+
+$cherry-light:                    rgba(70, 70, 70, 1);
+
+$tile-spacing:                    5px;
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
@@ -22,18 +29,38 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "www/lib/ionic/scss/ionic";
 
 .view-content-container {
-    background-color: $dark;
+    background-color: $cherry-gray;
+}
+
+#fixed-tabs {
+    position: fixed;
 }
 
 .seat-map-wrap {
-    height: 25%;
-    background-color: red;
+    height: 32%;
+    padding: $tile-spacing;
+    padding-top: $tile-spacing + 43px;
+    background-color: $cherry-light;
 }
 .seat-view-wrap {
-    height: 50%;
-    background-color: black;
+    height: 40%;
+    padding: $tile-spacing;
+    background-color: $cherry-light;
 }
 .seat-data-wrap {
-    height: 25%;
-    background-color: red;
+    height: 28%;
+    padding: $tile-spacing;
+    padding-bottom: $tile-spacing + 49px;
+    background-color: $cherry-light;
+}
+.panel-display {
+    height: 100%;
+    width: 100%;
+    background-color: $gray-red;
+    border-bottom: 2px solid black;
+}
+
+// custom add-on and effects ---------------------
+.box-shadow {
+    @include box-shadow($dark-cherry 3px 3px 2px);
 }

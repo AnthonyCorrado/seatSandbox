@@ -22,8 +22,8 @@ angular.module('ticketApp', [
     });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/');
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+    $urlRouterProvider.otherwise('/tab/seats');
     $stateProvider
         .state('tab', {
             url: '/tab',
@@ -40,4 +40,6 @@ angular.module('ticketApp', [
               }
             },
         });
+
+    $ionicConfigProvider.tabs.position('bottom');
 });
