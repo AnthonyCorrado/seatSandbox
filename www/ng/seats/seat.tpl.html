@@ -1,18 +1,71 @@
 <ion-view view-title="Home" class="view-content-container">
 
-    <div class="seat-map-wrap">
-        <div class="panel-display box-shadow">
+    <div resize class="seat-map-wrap" ng-style="{height: seatMapHeight + 'px'}">
+        <div class="panel-display inner-panel box-shadow">
+            <div class="map-image-wrap">
+                <div class="map-image"></div>
+            </div>
         </div>
     </div>
 
-    <div class="seat-view-wrap">
-        <div class="panel-display box-shadow">
+    <div resize class="seat-view-wrap" ng-style="{height: fixedRatio + 'px'}">
+        <div class="panel-display inner-panel box-shadow" >
+            <div class="view-image-wrap">
+                <div class="image"></div>
+            </div>
         </div>
     </div>
 
-    <div class="seat-data-wrap">
-        <div class="panel-display box-shadow">
+    <div resize class="seat-data-wrap font-white" ng-style="{height: seatDataHeight + 'px'}">
+        <div class="panel-display inner-panel box-shadow">
+            <div class="sub-box-half right-margin seam-border-right">
+
+                <div resize class="seat-filter-wrap padded-left">
+
+                    <div class="top-left twenty-half">
+                        <div class="center-text sub-text-icon" ng-style="{'line-height': (eleHeight / 2) + 'px'}">
+                            <i class="ion-ios-pricetags-outline"></i>
+                        </div>
+                    </div>
+
+                    <div class="top-right eighty-half">
+                        <div class="center-text" ng-style="{'line-height': (eleHeight / 2) + 'px'}">
+                            <div class="font-large"> - 2 +</div>
+                        </div>
+                    </div>
+
+                    <div class="bottom-left twenty-half">
+                        <div class="center-text sub-text-icon" ng-style="{'line-height': (eleHeight / 2) + 'px'}">
+                            <i class="ion-social-usd-outline"></i>
+                        </div>
+                    </div>
+
+                    <div class="bottom-right eighty-half">
+                        <div class="center-text" ng-style="{'line-height': (eleHeight / 2) + 'px'}">
+                            <div class="font-med">$50 - $99</div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="sub-box-half no-border-left">
+
+                <div resize class="seat-purchase-wrap">
+
+                    <div class="left-zero full-quarter top" ng-style="{'line-height': (eleHeight * 0.5) + 'px'}">
+                        <div class="center-text">Sec <span>108</span></div>
+                    </div>
+
+                    <div resize class="full-three-quarter bottom-three-quarter pay-button-wrap"
+                         ng-style="{'line-height': ((eleHeight * 0.8) -8) + 'px'}">
+                        <div class="pay-button center-text font-large font-color">From ${{eleHeight}}</div>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
     </div>
-
 </ion-view>

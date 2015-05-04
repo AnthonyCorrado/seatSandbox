@@ -13,14 +13,39 @@ $energized:                       #ffc900 !default;
 $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 */
+
+// $balanced:                        rgba(51, 205, 95, 1) !default;
 $cherry-gray:                     rgba(45, 45, 45, 1);
 $dark:                            $cherry-gray;
 $dark-cherry:                     rgba(30, 30, 30, 1);
 $gray-red:                        rgba(55, 55, 55, 1);
+$gray-red:                        rgba(55, 55, 55, 1);
 
 $cherry-light:                    rgba(70, 70, 70, 1);
+$cherry-bright:                   rgba(20, 20, 20, 1);
+$seam:                            rgba(20, 20, 20, 0.8);
 
+$font-white:                      rgba(230, 230, 230, 1);
+$font-size-med:                   20px;
+$font-size-large:                 25px;
+
+$icon-small:                      30px;   
 $tile-spacing:                    5px;
+$small-pad:                       5px;
+$med-pad:                         10px;
+
+// mixins ----------------------------------------
+@mixin linearGradient($top, $bottom){
+    background: $top; /* Old browsers */
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0); /* IE6-9 */
+}
+// -----------------------------------------------
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
@@ -28,8 +53,93 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+// basic class mods ----------------
+.center-text {
+    text-align: center;
+}
+.font-med {
+    font-size: $font-size-med;
+}
+.font-large {
+    font-size: $font-size-large;
+}
+.floated-left {
+    float: left;
+}
+.floated-right {
+    float: right;
+}
+.quarter-width {
+    width: 20%;
+}
+.three-quarter-width {
+    width: 75%;
+}
+.half-cube {
+    width: 50%;
+    height: 50%;
+}
+.twenty-half {
+    width: 20%;
+    height: 50%;
+}
+.eighty-half {
+    width: 80%;
+    height: 50%;
+}
+.full-half {
+    width: 100%;
+    height: 50%;
+}
+.quarter-full {
+    width: 25%;
+    height: 100%;
+}
+.quarter-half {
+    width: 25%;
+    height: 50%;
+}
+.three-quarter-full  {
+    width: 75%;
+    height: 100%;
+}
+.full-quarter {
+    width: 100%;
+    height: 25%;
+}
+.full-three-quarter {
+    width: 100%;
+    height: 75%;
+}
+.data-padding {
+    padding: $small-pad 0;
+}
+.padded-left {
+   padding: 0 $small-pad; 
+}
+.blue {
+    background-color: blue;
+}
+.red {
+    background-color: red;
+}
+.font-white {
+    color: $font-white
+}
+.font-color {
+    color: white;
+}
+.zero-margin {
+    margin: 0 !important;
+}
+// ----------------------------------
+
 .view-content-container {
     background-color: $cherry-gray;
+}
+.sub-text-icon {
+    color: darken( steelblue, 10% );
+    font-size: $icon-small;
 }
 
 #fixed-tabs {
@@ -40,24 +150,125 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     height: 32%;
     padding: $tile-spacing;
     padding-top: $tile-spacing + 43px;
-    background-color: $cherry-light;
+    background-color: darken( steelblue, 30% );
 }
+.map-image-wrap {
+    height: 100%;
+    border: 2px solid $cherry-bright;
+}
+.map-image {
+    height: 100%;
+    background: url(../img/SSC.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
 .seat-view-wrap {
     height: 40%;
     padding: $tile-spacing;
-    background-color: $cherry-light;
+    background-color: darken( steelblue, 30% );
 }
+.view-image-wrap {
+    height: 100%;
+    margin: 0 auto;
+    border: 2px solid $cherry-bright;
+    overflow: hidden;
+    // background-color: purple;
+}
+
 .seat-data-wrap {
     height: 28%;
     padding: $tile-spacing;
     padding-bottom: $tile-spacing + 49px;
-    background-color: $cherry-light;
+    background-color: darken( steelblue, 30% );
 }
 .panel-display {
     height: 100%;
     width: 100%;
     background-color: $gray-red;
     border-bottom: 2px solid black;
+}
+.inner-panel {
+    padding: $tile-spacing * 2;
+}
+.sub-box-half {
+    width: 50%;
+    height: 100%;
+    float: left;
+    border: 2px solid $cherry-bright;
+}
+.seam-border-right {
+    border-right: 1px solid $seam;
+}
+.no-border-left {
+    border-left: 0;
+}
+
+.image {
+    height: 100%;
+    background: url(../img/staplesFirstHalfSprite.png) 100%;
+    background-size: 1700%;
+    background-repeat: no-repeat;
+}
+
+// seating data stylings -------------------------
+.seat-filter-wrap {
+    height: 100%;
+    position: relative;
+}
+.seat-purchase-wrap {
+    height: 100%;
+    position: relative;
+}
+.price-range-wrap {
+    background-color: green;
+}
+.top-left {
+    position: absolute;
+}
+.top-right {
+    position: absolute;
+    left: 20%;
+}
+.bottom-left {
+    position: absolute;
+    top: 50%;
+}
+.bottom-right {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+}
+.bottom {
+    top: 50%;
+}
+.bottom-three-quarter {
+    top: 25%;
+    position: absolute;
+}
+.left-quarter {
+    left: 25%;
+    position: absolute;
+}
+.left-zero {
+    left: 0;
+    position: absolute;
+}
+.pay-button-wrap {
+    padding: $small-pad $med-pad;
+}
+.pay-button {
+    height: 75%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid black;
+    @include box-shadow($dark-cherry 1px 1px 2px);
+    @include linearGradient(darken( steelblue, 10% ), darken( steelblue, 20% ));
+    // background-color: darken( steelblue, 10% );
+    border-radius: 5px;
+    // darken( steelblue, 10% )
+    // lighten( $base-color, 10% )
 }
 
 // custom add-on and effects ---------------------

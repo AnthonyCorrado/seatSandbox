@@ -6,7 +6,8 @@
 angular.module('ticketApp', [
     'ionic',
     'tabController',
-    'seatController'
+    'seatController',
+    'resize'
     ])
 
 .run(function($ionicPlatform) {
@@ -41,5 +42,8 @@ angular.module('ticketApp', [
             },
         });
 
-    $ionicConfigProvider.tabs.position('bottom');
+    $ionicConfigProvider.
+        tabs.position('bottom');
+    $ionicConfigProvider.
+        navBar.alignTitle('center');
 });

@@ -7674,8 +7674,90 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+.center-text {
+  text-align: center; }
+
+.font-med {
+  font-size: 20px; }
+
+.font-large {
+  font-size: 25px; }
+
+.floated-left {
+  float: left; }
+
+.floated-right {
+  float: right; }
+
+.quarter-width {
+  width: 20%; }
+
+.three-quarter-width {
+  width: 75%; }
+
+.half-cube {
+  width: 50%;
+  height: 50%; }
+
+.twenty-half {
+  width: 20%;
+  height: 50%; }
+
+.eighty-half {
+  width: 80%;
+  height: 50%; }
+
+.full-half {
+  width: 100%;
+  height: 50%; }
+
+.quarter-full {
+  width: 25%;
+  height: 100%; }
+
+.quarter-half {
+  width: 25%;
+  height: 50%; }
+
+.three-quarter-full {
+  width: 75%;
+  height: 100%; }
+
+.full-quarter {
+  width: 100%;
+  height: 25%; }
+
+.full-three-quarter {
+  width: 100%;
+  height: 75%; }
+
+.data-padding {
+  padding: 5px 0; }
+
+.padded-left {
+  padding: 0 5px; }
+
+.blue {
+  background-color: blue; }
+
+.red {
+  background-color: red; }
+
+.font-white {
+  color: #e6e6e6; }
+
+.font-color {
+  color: white; }
+
+.zero-margin {
+  margin: 0 !important; }
+
 .view-content-container {
   background-color: #2d2d2d; }
+
+.sub-text-icon {
+  color: #38678f;
+  font-size: 30px; }
 
 #fixed-tabs {
   position: fixed; }
@@ -7684,24 +7766,132 @@ a.button {
   height: 32%;
   padding: 5px;
   padding-top: 48px;
-  background-color: #464646; }
+  background-color: #1b3246; }
+
+.map-image-wrap {
+  height: 100%;
+  border: 2px solid #141414; }
+
+.map-image {
+  height: 100%;
+  background: url(../img/SSC.png);
+  background-size: 100%;
+  background-repeat: no-repeat; }
 
 .seat-view-wrap {
   height: 40%;
   padding: 5px;
-  background-color: #464646; }
+  background-color: #1b3246; }
+
+.view-image-wrap {
+  height: 100%;
+  margin: 0 auto;
+  border: 2px solid #141414;
+  overflow: hidden; }
 
 .seat-data-wrap {
   height: 28%;
   padding: 5px;
   padding-bottom: 54px;
-  background-color: #464646; }
+  background-color: #1b3246; }
 
 .panel-display {
   height: 100%;
   width: 100%;
   background-color: #373737;
   border-bottom: 2px solid black; }
+
+.inner-panel {
+  padding: 10px; }
+
+.sub-box-half {
+  width: 50%;
+  height: 100%;
+  float: left;
+  border: 2px solid #141414; }
+
+.seam-border-right {
+  border-right: 1px solid rgba(20, 20, 20, 0.8); }
+
+.no-border-left {
+  border-left: 0; }
+
+.image {
+  height: 100%;
+  background: url(../img/staplesFirstHalfSprite.png) 100%;
+  background-size: 1700%;
+  background-repeat: no-repeat; }
+
+.seat-filter-wrap {
+  height: 100%;
+  position: relative; }
+
+.seat-purchase-wrap {
+  height: 100%;
+  position: relative; }
+
+.price-range-wrap {
+  background-color: green; }
+
+.top-left {
+  position: absolute; }
+
+.top-right {
+  position: absolute;
+  left: 20%; }
+
+.bottom-left {
+  position: absolute;
+  top: 50%; }
+
+.bottom-right {
+  position: absolute;
+  top: 50%;
+  left: 20%; }
+
+.bottom {
+  top: 50%; }
+
+.bottom-three-quarter {
+  top: 25%;
+  position: absolute; }
+
+.left-quarter {
+  left: 25%;
+  position: absolute; }
+
+.left-zero {
+  left: 0;
+  position: absolute; }
+
+.pay-button-wrap {
+  padding: 5px 10px; }
+
+.pay-button {
+  height: 75%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid black;
+  -webkit-box-shadow: #1e1e1e 1px 1px 2px;
+  box-shadow: #1e1e1e 1px 1px 2px;
+  background: #38678f;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #38678f 0%, #294d6b 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #38678f), color-stop(100%, #294d6b));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #38678f 0%, #294d6b 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #38678f 0%, #294d6b 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #38678f 0%, #294d6b 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #38678f 0%, #294d6b 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0);
+  /* IE6-9 */
+  border-radius: 5px; }
 
 .box-shadow {
   -webkit-box-shadow: #1e1e1e 3px 3px 2px;
